@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Blossis - Sosis Berbalut Kulit Pangsit Renyah</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Blossis, tentang blossis, sejarah blossis, inovasi camilan, makanan unik Pekanbaru" name="keywords">
+    <meta content="Tentang Blossis - Inovasi camilan unik dari Pekanbaru yang menggabungkan kelezatan sosis dengan kerenyahan kulit pangsit gurih." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <span class="logo-font">Blossis</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+                <a href="index.php#menu" class="btn btn-primary ms-lg-3">Lihat Menu</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <!-- Floating bubbles decoration -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        
+        <div class="container about-content text-center">
+            <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">Our Story</h1>
+            <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">Discover the passion behind Blossis</p>
+            <div class="hero-decorative-line"></div>
+            <a href="#about-content" class="btn btn-scroll-down animate__animated animate__fadeInUp animate__delay-2s">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-5" id="about-content">
+        <div class="container py-5">
+            <div class="row align-items-center gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="about-img-container">
+                        <img src="img/Poster-Blossis.png" alt="Blossis camilan sosis dengan kulit pangsit renyah" class="img-fluid about-img">
+                        <!-- <div class="img-badge">Since 2025</div> -->
+                        <div class="img-overlay">
+                            <div class="overlay-content">
+                                <h3>Blossis Signature</h3>
+                                <p>Perpaduan sempurna rasa dan tekstur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="section-title">Tentang Blossis</h5>
+                    <h2 class="mb-4">Keunikan Blossis</h2>
+                    <div class="about-text-content">
+                        <p class="mb-4">Blossis adalah inovasi camilan kekinian yang menyatukan kelezatan sosis premium dengan kerenyahan kulit pangsit gurih. Setiap gigitan memberikan pengalaman tekstur unik - renyah di luar dengan kelembutan sosis juicy di dalam.</p>
+                        
+                        <p class="mb-4">Diciptakan untuk memenuhi kebutuhan camilan praktis namun tetap spesial, Blossis berbeda dari sosis biasa karena memiliki lapisan luar yang super renyah berkat kulit pangsit khusus yang dikembangkan melalui berbagai percobaan untuk mencapai kesempurnaan rasa.</p>
+                        
+                        <div class="about-highlight-box">
+                            <i class="fas fa-star"></i>
+                            <p>Kami hanya menggunakan bahan-bahan pilihan: sosis berkualitas tinggi dengan kandungan daging minimal 70% dan kulit pangsit premium yang diimpor langsung untuk menjamin kualitas terbaik.</p>
+                        </div>
+                        
+                        <p class="mb-4">Blossis hadir dalam berbagai varian rasa yang bisa memenuhi berbagai selera:</p>
+                        
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <div class="flavor-item">
+                                    <i class="fas fa-check-circle text-primary"></i>
+                                    <span>Original (Gurih Asli)</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="flavor-item">
+                                    <i class="fas fa-check-circle text-primary"></i>
+                                    <span>Cabe Balado</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="flavor-item">
+                                    <i class="fas fa-check-circle text-primary"></i>
+                                    <span>Saus Mentai</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="flavor-item">
+                                    <i class="fas fa-check-circle text-primary"></i>
+                                    <span>Saus Mayonaise</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">Proses pembuatan Blossis dilakukan dengan standar higienis tinggi melalui beberapa tahapan:</p>
+                        
+                        <ul class="process-list mb-4">
+                            <li>Seleksi bahan baku ketat</li>
+                            <li>Pengolahan di lingkungan bersuhu terkontrol</li>
+                            <li>Pengemasan steril dengan teknologi vacuum</li>
+                            <li>Quality check sebelum distribusi</li>
+                        </ul>
+                        
+                        <p>Blossis cocok untuk berbagai kesempatan - mulai dari camilan sehari-hari, teman ngopi, hingga hidangan untuk acara spesial. Praktis dibawa bepergian namun tetap terasa premium dan memuaskan.</p>
+                    </div>
+                    <!-- <div class="about-stats row mt-4">
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="12">0</span>+
+                                <span class="stat-label">Varian Rasa</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="5000">0</span>+
+                                <span class="stat-label">Pelanggan</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="100">0</span>%
+                                <span class="stat-label">Kepuasan</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <a href="index.php#menu" class="btn btn-primary mt-4">Lihat Menu Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-5 bg-light position-relative">
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="section-title">Nilai Kami</h5>
+                <h2 class="mb-4">Yang Membuat Blossis Spesial</h2>
+                <p class="lead">Kami berkomitmen untuk memberikan yang terbaik</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Kualitas Terbaik</h3>
+                        <p>Kami hanya menggunakan bahan-bahan pilihan dengan standar kualitas tertinggi untuk memastikan rasa yang konsisten dan lezat.</p>
+                        <div class="feature-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Inovasi Rasa</h3>
+                        <p>Terus berinovasi menciptakan varian rasa baru yang unik dan menggugah selera, tetap mempertahankan cita rasa khas Blossis.</p>
+                        <div class="feature-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Dibuat dengan Cinta</h3>
+                        <p>Setiap Blossis dibuat dengan penuh perhatian dan dedikasi, karena kami percaya makanan enak berasal dari hati.</p>
+                        <div class="feature-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <!-- <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="section-title">Tim Kami</h5>
+                <h2 class="mb-4">Orang-orang di Balik Blossis</h2>
+                <p class="lead">Tim profesional yang berdedikasi untuk menghadirkan pengalaman kuliner terbaik untuk Anda</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/team1.jpg" class="img-fluid team-img" alt="Sarah Wijaya, Founder dan Head Chef Blossis">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mb-1">Sarah Wijaya</h4>
+                            <p class="text-muted mb-3">Founder & Head Chef</p>
+                            <p class="team-bio">Pencipta resep utama Blossis dengan pengalaman 10 tahun di dunia kuliner.</p>
+                            <div class="team-social">
+                                <a href="#" class="social-icon" aria-label="Instagram Sarah Wijaya"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn Sarah Wijaya"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/team2.jpg" class="img-fluid team-img" alt="Budi Santoso, Marketing Director Blossis">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mb-1">Budi Santoso</h4>
+                            <p class="text-muted mb-3">Marketing Director</p>
+                            <p class="team-bio">Ahli strategi pemasaran yang membawa Blossis dikenal luas di masyarakat.</p>
+                            <div class="team-social">
+                                <a href="#" class="social-icon" aria-label="Instagram Budi Santoso"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn Budi Santoso"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/team3.jpg" class="img-fluid team-img" alt="Dewi Anggraeni, Creative Director Blossis">
+                        </div>
+                        <div class="p-4">
+                            <h4 class="mb-1">Dewi Anggraeni</h4>
+                            <p class="text-muted mb-3">Creative Director</p>
+                            <p class="team-bio">Bertanggung jawab atas branding dan pengembangan produk baru Blossis.</p>
+                            <div class="team-social">
+                                <a href="#" class="social-icon" aria-label="Instagram Dewi Anggraeni"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn Dewi Anggraeni"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Testimonials -->
+    <!-- <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="section-title">Testimoni</h5>
+                <h2 class="mb-4">Apa Kata Pelanggan Kami</h2>
+                <p class="lead">Dengar langsung dari mereka yang telah mencicipi Blossis</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Blossis benar-benar unik! Teksturnya yang renyah di luar dan lembut di dalam bikin ketagihan. Sudah pesan berkali-kali!"</p>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial1.jpg" alt="Andi Pratama" class="testimonial-avatar">
+                            <div>
+                                <h5>Andi Pratama</h5>
+                                <p>Pekanbaru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Varian Saus Mentai favorit saya! Rasanya sangat khas dan berbeda dari camilan sosis biasa. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial2.jpg" alt="Rina Wijayanti" class="testimonial-avatar">
+                            <div>
+                                <h5>Rina Wijayanti</h5>
+                                <p>Bandung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"Kemasan praktis dan higienis. Cocok untuk oleh-oleh atau camilan saat berkumpul dengan keluarga."</p>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial3.jpg" alt="Budi Setiawan" class="testimonial-avatar">
+                            <div>
+                                <h5>Budi Setiawan</h5>
+                                <p>Jakarta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA Section -->
+    <section class="py-5 position-relative cta-section">
+        <div class="bubble bubble-6"></div>
+        <div class="bubble bubble-7"></div>
+        
+        <div class="container py-5 text-center">
+            <h2 class="mb-4 text-white">Siap Mencoba Blossis?</h2>
+            <p class="lead mb-5 text-white">Pesan sekarang dan rasakan pengalaman kuliner yang unik!</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/6282388486060" target="_blank" class="btn btn-light btn-lg px-5 me-3">
+                    <i class="fab fa-whatsapp me-2"></i> Pesan via WhatsApp
+                </a>
+                <a href="index.php#menu" class="btn btn-outline-light btn-lg px-5">
+                    <i class="fas fa-utensils me-2"></i> Lihat Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container py-4 footer-content">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="text-white mb-4">
+                        <span class="logo-font">Blossis</span>
+                    </h3>
+                    <p class="text-white-50">Inovasi camilan unik dari Pekanbaru yang menggabungkan kelezatan sosis dengan kerenyahan kulit pangsit gurih.</p>
+                    <div class="mt-4">
+                        <a href="https://www.instagram.com/blossis_" target="_blank" class="social-icon" aria-label="Instagram Blossis"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6282388486060" target="_blank" class="social-icon" aria-label="WhatsApp Blossis"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook Blossis"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="TikTok Blossis"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.php" class="text-white-50 text-decoration-none hover-underline">Beranda</a></li>
+                        <li class="mb-2"><a href="about.php" class="text-white-50 text-decoration-none hover-underline">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="index.php#menu" class="text-white-50 text-decoration-none hover-underline">Menu</a></li>
+                        <li class="mb-2"><a href="contact.php" class="text-white-50 text-decoration-none hover-underline">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Kontak Kami</h5>
+                    <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2"></i> Pekanbaru, Riau, Indonesia</p>
+                    <p class="text-white-50 mb-2">
+                        <a href="https://wa.me/6282388486060" target="_blank" class="text-white-50 text-decoration-none hover-underline">
+                            <i class="fab fa-whatsapp me-2"></i> 0823-8848-6060
+                        </a>
+                    </p>
+                    <p class="text-white-50 mb-2">
+                        <a href="https://www.instagram.com/blossis_" target="_blank" class="text-white-50 text-decoration-none hover-underline">
+                            <i class="fab fa-instagram me-2"></i> @blossis_
+                        </a>
+                    </p>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Jam Operasional</h5>
+                    <p class="text-white-50 mb-2"><strong>Senin - Jumat:</strong> 08.00 - 14.00</p>
+                    <p class="text-white-50 mb-2"><strong>Sabtu:</strong> 08.00 - 12.00</p>
+                    <p class="text-white-50"><strong>Minggu:</strong> Libur</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-white-50">
+            
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; <span id="current-year">2023</span> Blossis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary btn-back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                backToTop.classList.add('show');
+            } else {
+                navbar.classList.remove('scrolled');
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.feature-box, .team-card, .testimonial-card, .about-img-container, .about-text-content');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }
+        
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Initialize counters when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.about-stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Back to top button
+        document.getElementById('back-to-top').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
+</body>
+</html>

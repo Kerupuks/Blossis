@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Blossis - Sosis Berbalut Kulit Pangsit Renyah</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Blossis, contact blossis, order blossis, makanan unik Pekanbaru, delivery blossis" name="keywords">
+    <meta content="Hubungi Blossis - Inovasi camilan unik dari Pekanbaru yang menggabungkan kelezatan sosis dengan kerenyahan kulit pangsit gurih." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <span class="logo-font">Blossis</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+                <a href="index.php#menu" class="btn btn-primary ms-lg-3">Lihat Menu</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <!-- Floating bubbles decoration -->
+        <div class="bubble" style="width: 100px; height: 100px; top: 20%; left: 10%;"></div>
+        <div class="bubble" style="width: 150px; height: 150px; bottom: 15%; right: 10%;"></div>
+        
+        <div class="container contact-content text-center">
+            <h1 class="display-3 fw-bold mb-4 animate-hero-title">Hubungi Kami</h1>
+            <p class="lead mb-0 animate-hero-text">Kami siap menjawab pertanyaan Anda</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="map-container">
+                        <iframe class="w-100" height="450" style="border:0; min-height: 750px;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d137460.18841688568!2d101.45160598542867!3d0.490615764834265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab80690ee7b1%3A0x94dde92c3823dbe4!2sPekanbaru%2C%20Kota%20Pekanbaru%2C%20Riau!5e1!3m2!1sid!2sid!4v1742746956808!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-card">
+                        <h5 class="section-title">Kontak Kami</h5>
+                        <h2 class="mb-4">Informasi Kontak</h2>
+                        <p class="mb-4">Anda bisa menghubungi kami melalui berbagai cara berikut:</p>
+                        
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="contact-card text-center">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <h4>Alamat</h4>
+                                    <p class="mb-0">
+                                        <a href="https://maps.google.com/?q=Kota Pekanbaru, Riau, Indonesia" target="_blank" class="text-decoration-none">
+                                            Kota Pekanbaru, Riau
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-card text-center">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <h4>WhatsApp</h4>
+                                    <p class="mb-0">
+                                        <a href="https://wa.me/6282388486060" target="_blank" class="text-decoration-none">
+                                            0823-8848-6060
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-card text-center">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <h4>Instagram</h4>
+                                    <p class="mb-0">
+                                        <a href="https://instagram.com/Blossis_" target="_blank" class="text-decoration-none">
+                                            @Blossis_
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-card text-center">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h4>Jam Operasional</h4>
+                                    <p class="mb-0">08.00 - 14.00 (Senin-Jumat)</p>
+                                    <p class="mb-0">08.00 - 12.00 (Sabtu)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <h5 class="mt-4">Atau kirim pesan langsung:</h5>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nama Anda" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Anda" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Subjek" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100" type="submit">Kirim Pesan</button>
+                                </div>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 position-relative" style="background: linear-gradient(135deg, var(--highlight-color), var(--secondary-color));">
+        <div class="bubble" style="width: 150px; height: 150px; top: -50px; left: 10%; background: rgba(255,255,255,0.2);"></div>
+        <div class="bubble" style="width: 80px; height: 80px; bottom: -30px; right: 15%; background: rgba(255,255,255,0.15);"></div>
+        
+        <div class="container py-5 text-center">
+            <h2 class="mb-4 text-white">Siap Memesan Blossis?</h2>
+            <p class="lead mb-5 text-white">Pesan sekarang melalui WhatsApp dan nikmati kelezatan Blossis!</p>
+            <a href="https://wa.me/6282388486060" target="_blank" class="btn btn-light btn-lg px-5">
+                <i class="fab fa-whatsapp me-2"></i> Pesan Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="text-white mb-4">
+                        <span class="logo-font">Blossis</span>
+                    </h3>
+                    <p class="text-white-50">Inovasi camilan unik dari Pekanbaru yang menggabungkan kelezatan sosis dengan kerenyahan kulit pangsit gurih.</p>
+                    <div class="mt-4">
+                        <a href="https://www.instagram.com/blossis_" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6282388486060" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.php" class="text-white-50 text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="about.php" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="index.php#menu" class="text-white-50 text-decoration-none">Menu</a></li>
+                        <li class="mb-2"><a href="contact.php" class="text-white-50 text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Kontak Kami</h5>
+                    <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2"></i> Pekanbaru, Riau, Indonesia</p>
+                    <p class="text-white-50 mb-2">
+                        <a href="https://wa.me/6282388486060" target="_blank" class="text-white-50 text-decoration-none">
+                            <i class="fab fa-whatsapp me-2"></i> 0823-8848-6060
+                        </a>
+                    </p>
+                    <p class="text-white-50 mb-2">
+                        <a href="https://www.instagram.com/blossis_" target="_blank" class="text-white-50 text-decoration-none">
+                            <i class="fab fa-instagram me-2"></i> @blossis_
+                        </a>
+                    </p>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Jam Operasional</h5>
+                    <p class="text-white-50 mb-2"><strong>Senin - Jumat:</strong> 08.00 - 14.00</p>
+                    <p class="text-white-50"><strong>Sabtu:</strong> 08.00 - 12.00</p>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-white-50">
+            
+            <div class="text-center text-white-50">
+                <p class="mb-0">© 2023 Blossis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Animasi kartu kontak saat masuk viewport
+        function animateContactCards() {
+            const cards = document.querySelectorAll('.contact-card');
+            cards.forEach((card, index) => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (cardPosition < screenPosition) {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 150); // Delay bertahap untuk setiap kartu
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateContactCards);
+        document.addEventListener('DOMContentLoaded', animateContactCards);
+    </script>
+</body>
+</html>

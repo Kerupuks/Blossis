@@ -1,0 +1,597 @@
+:root {
+    --primary-color: #FF3D68;
+    --secondary-color: #FFB347;
+    --accent-color: #A7FF83;
+    --dark-color: #3A2E26;
+    --light-color: #FFF8F0;
+    --highlight-color: #FF8A5B;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+.logo-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary-color);
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animated background for hero */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--highlight-color) 100%);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+    background-size: 100px 100px;
+    animation: waveAnimation 20s linear infinite;
+    transform: rotate(15deg);
+    z-index: 1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+@keyframes waveAnimation {
+    0% { transform: rotate(15deg) translateX(0); }
+    100% { transform: rotate(15deg) translateX(-100px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Rotating animation for hero image */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#blossis-logo {
+    animation: rotate 8s linear infinite;
+    transform-origin: center center;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+.pulse-animation:hover {
+    animation: none;
+}
+
+/* Glow effect for special items */
+.glow-on-hover {
+    transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Custom navbar with gradient */
+.navbar {
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255,255,255,0.98) !important;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary-color), var(--highlight-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: var(--dark-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Vibrant buttons */
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--highlight-color));
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 61, 104, 0.3);
+}
+
+.btn-primary:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.btn-outline-light:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* Product cards with 3D effect */
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: white;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 1;
+}
+
+.product-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 61, 104, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Pastikan pseudo-elemen tidak mengganggu klik */
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 61, 104, 0.2);
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+.product-img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.1);
+}
+
+/* Ensure pesan-sekarang button is clickable */
+.pesan-sekarang {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto !important;
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.pesan-sekarang:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.pesan-sekarang:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Styling untuk invalid feedback */
+.invalid-feedback {
+    display: none;
+    font-size: 0.875rem;
+    color: var(--primary-color);
+}
+
+.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* Styling untuk input group */
+.input-group .btn-outline-secondary {
+    min-width: 40px;
+    transition: all 0.2s ease;
+}
+
+.input-group .btn-outline-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Styling untuk toast */
+.toast {
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Section styling */
+.section-title {
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -8px;
+    left: 0;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 3px;
+}
+
+/* Testimonial cards */
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.testimonial-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Floating bubbles decoration */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    z-index: 1;
+}
+
+.bubble-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.03)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+    background-size: 80px 80px;
+    animation: waveAnimation 25s linear infinite reverse;
+    transform: rotate(-10deg);
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Social icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.social-icon:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Special offer badge */
+.offer-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--accent-color);
+    color: var(--dark-color);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    animation: pulse 1.5s infinite;
+    z-index: 3;
+}
+
+/* Custom animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-up.delay-1s {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal Pesan Custom Styles */
+#pesanModal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#pesanModal .modal-header {
+    background: var(--primary-color);
+    color: white;
+    border-bottom: none;
+    padding: 1.2rem;
+}
+
+#pesanModal .modal-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#pesanModal .modal-body {
+    padding: 1.5rem;
+}
+
+#pesanModal .btn-close-white {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+#pesanModal .btn-close-white:hover {
+    opacity: 1;
+}
+
+#pesanModal #modalNama {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+#pesanModal #modalHarga {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+#pesanModal #modalDeskripsi {
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+#pesanModal .form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+#pesanModal .form-control {
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#pesanModal .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 61, 104, 0.25);
+}
+
+#pesanModal .modal-footer {
+    border-top: none;
+    padding: 1rem 1.5rem;
+}
+
+#pesanModal #konfirmasiPesan {
+    background: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#pesanModal #konfirmasiPesan:hover {
+    background: var(--highlight-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .bubble {
+        display: none;
+    }
+
+    #blossis-logo {
+        min-width: 150px;
+    }
+
+    .hero-section {
+        padding: 80px 0;
+    }
+
+    .product-img {
+        height: 150px;
+    }
+
+    .product-card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #pesanModal .modal-dialog {
+        margin: 1rem;
+    }
+    
+    #pesanModal .modal-body .row {
+        flex-direction: column;
+    }
+    
+    #pesanModal #modalGambar {
+        margin-bottom: 1rem;
+    }
+}
