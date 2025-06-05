@@ -414,33 +414,69 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <img id="modalGambar" src="" class="img-fluid rounded" alt="Menu" style="max-height: 200px; width: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-md-6">
-                            <h4 id="modalNama" class="mb-2"></h4>
-                            <h5 id="modalHarga" class="text-primary mb-3"></h5>
-                            <p id="modalDeskripsi" class="small text-muted mb-3"></p>
-                            <div class="mb-3">
-                                <label for="jumlahPesan" class="form-label">Jumlah</label>
-                                <div class="input-group">
-                                    <button class="btn btn-outline-secondary" type="button" id="kurangJumlah" aria-label="Kurangi jumlah">-</button>
-                                    <input type="number" class="form-control text-center" id="jumlahPesan" min="1" value="1" aria-describedby="jumlahError">
-                                    <button class="btn btn-outline-secondary" type="button" id="tambahJumlah" aria-label="Tambah jumlah">+</button>
+                    <form id="orderForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <img id="modalGambar" src="" class="img-fluid rounded" alt="Menu" style="max-height: 200px; width: 100%; object-fit: cover;">
+                            </div>
+                            <div class="col-md-6">
+                                <h4 id="modalNama" class="mb-2"></h4>
+                                <h5 id="modalHarga" class="text-primary mb-3"></h5>
+                                <p id="modalDeskripsi" class="small text-muted mb-3"></p>
+                                
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" required>
                                 </div>
-                                <div id="jumlahError" class="invalid-feedback"></div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="catatan" class="form-label">Catatan (opsional)</label>
-                                <textarea class="form-control" id="catatan" rows="2" placeholder="Contoh: Pedas, tambah saus, dll"></textarea>
+                                
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Alamat</label>
+                                    <textarea class="form-control" id="address" rows="2" placeholder="Masukkan alamat pengiriman" required></textarea>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Nomor HP</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Masukkan nomor HP" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="payment" class="form-label">Pembayaran</label>
+                                    <select class="form-control" id="payment" required>
+                                        <option value="" disabled selected>Pilih metode</option>
+                                        <option value="Transfer">Transfer</option>
+                                        <option value="COD">COD</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3" id="sauce-group" style="display: none;">
+                                    <label for="sauce" class="form-label">Varian Saus </label>
+                                    <select class="form-control" id="sauce">
+                                        <option value="" disabled selected>Pilih saus</option>
+                                        <option value="Saus Cabe">Saus Cabe</option>
+                                        <option value="Mayones">Mayones</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="quantity" class="form-label">Jumlah</label>
+                                    <div class="input-group">
+                                        <button type="button" class="btn btn-outline-secondary" onclick="updateQuantity(-1)">-</button>
+                                        <input type="text" class="form-control text-center" id="quantity" value="1" readonly>
+                                        <button type="button" class="btn btn-outline-secondary" onclick="updateQuantity(1)">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="note" class="form-label">Catatan (opsional)</label>
+                                    <textarea class="form-control" id="note" rows="2" placeholder="Contoh: Pedas, tambah saus, dll"></textarea>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-primary" id="konfirmasiPesan">
+                    <button type="button" class="btn btn-primary" onclick="sendOrder()">
                         <i class="fab fa-whatsapp me-2"></i> Pesan via WhatsApp
                     </button>
                 </div>
@@ -451,7 +487,7 @@
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
-        // Fallback untuk Bootstrap jika CDN gagal
+       // Fallback untuk Bootstrap jika CDN gagal
         if (typeof bootstrap === 'undefined') {
             console.error('Bootstrap tidak dimuat. Memuat fallback...');
             const script = document.createElement('script');
@@ -462,164 +498,48 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Debugging: Log untuk memastikan kode dijalankan
-            console.log('DOMContentLoaded fired');
+            // Inisialisasi modal
+            const pesanModal = new bootstrap.Modal(document.getElementById('pesanModal'));
 
-            // Inisialisasi modal dengan penanganan error
-            let pesanModal;
-            try {
-                const modalElement = document.getElementById('pesanModal');
-                if (!modalElement) {
-                    throw new Error('Elemen modal pesanModal tidak ditemukan');
-                }
-                pesanModal = new bootstrap.Modal(modalElement, {
-                    keyboard: true,
-                    backdrop: 'static'
-                });
-                console.log('Modal initialized successfully');
-            } catch (error) {
-                console.error('Error initializing modal:', error);
-                return;
-            }
+            // Tangkap semua tombol pesan
+            document.querySelectorAll('.pesan-sekarang').forEach(button => {
+                button.addEventListener('click', function() {
+                    const nama = this.getAttribute('data-nama');
+                    const harga = this.getAttribute('data-harga');
+                    const deskripsi = this.getAttribute('data-deskripsi');
+                    const gambar = this.getAttribute('data-gambar');
 
-            // Tangkap elemen untuk validasi
-            const jumlahPesan = document.getElementById('jumlahPesan');
-            const jumlahError = document.getElementById('jumlahError');
-            const konfirmasiPesan = document.getElementById('konfirmasiPesan');
+                    // Isi modal dengan data
+                    document.getElementById('modalNama').textContent = nama;
+                    document.getElementById('modalHarga').textContent = harga;
+                    document.getElementById('modalDeskripsi').textContent = deskripsi;
+                    document.getElementById('modalGambar').src = gambar;
 
-            // Debugging: Log semua tombol pesan
-            const pesanButtons = document.querySelectorAll('.pesan-sekarang');
-            console.log('Found', pesanButtons.length, 'pesan-sekarang buttons');
-
-            // Fungsi untuk menampilkan error
-            const showError = (message) => {
-                jumlahError.textContent = message;
-                jumlahPesan.classList.add('is-invalid');
-                jumlahPesan.focus();
-            };
-
-            // Fungsi untuk menghapus error
-            const clearError = () => {
-                jumlahError.textContent = '';
-                jumlahPesan.classList.remove('is-invalid');
-            };
-
-            // Tambahkan event listener untuk setiap tombol pesan
-            pesanButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    console.log('Pesan button clicked:', button.dataset.nama);
-
-                    // Ambil data dari atribut data
-                    try {
-                        const nama = button.dataset.nama;
-                        const harga = button.dataset.harga;
-                        const deskripsi = button.dataset.deskripsi;
-                        const gambar = button.dataset.gambar;
-
-                        if (!nama || !harga || !deskripsi || !gambar) {
-                            throw new Error('Atribut data tidak lengkap pada tombol');
+                    // Tampilkan/menyembunyikan pilihan saus berdasarkan menu
+                    const sauceGroup = document.getElementById('sauce-group');
+                    if (nama === 'Blossis Original' || nama === 'Blosom Kentang') {
+                        sauceGroup.style.display = 'block';
+                        document.getElementById('sauce').setAttribute('required', 'required');
+                        
+                        // Update label berdasarkan menu
+                        const sauceLabel = document.querySelector('#sauce-group label');
+                        if (nama === 'Blossis Original') {
+                            sauceLabel.textContent = 'Varian Saus (untuk Blossis Original)';
+                        } else {
+                            sauceLabel.textContent = 'Varian Saus (untuk Blosom Kentang)';
                         }
-
-                        // Isi modal dengan data
-                        document.getElementById('modalNama').textContent = nama;
-                        document.getElementById('modalHarga').textContent = harga;
-                        document.getElementById('modalDeskripsi').textContent = deskripsi;
-                        document.getElementById('modalGambar').src = gambar;
-
-                        // Reset form
-                        jumlahPesan.value = 1;
-                        document.getElementById('catatan').value = '';
-                        clearError();
-
-                        // Tampilkan modal
-                        pesanModal.show();
-                    } catch (error) {
-                        console.error('Error populating modal:', error);
+                    } else {
+                        sauceGroup.style.display = 'none';
+                        document.getElementById('sauce').removeAttribute('required');
                     }
+
+                    // Reset form
+                    document.getElementById('orderForm').reset();
+                    document.getElementById('quantity').value = 1;
+
+                    // Tampilkan modal
+                    pesanModal.show();
                 });
-
-                // Tambahkan aksesibilitas untuk keyboard
-                button.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        button.click();
-                    }
-                });
-            });
-
-            // Tombol tambah dan kurang jumlah
-            document.getElementById('tambahJumlah').addEventListener('click', () => {
-                jumlahPesan.value = parseInt(jumlahPesan.value) + 1;
-                clearError();
-            });
-
-            document.getElementById('kurangJumlah').addEventListener('click', () => {
-                if (parseInt(jumlahPesan.value) > 1) {
-                    jumlahPesan.value = parseInt(jumlahPesan.value) - 1;
-                    clearError();
-                }
-            });
-
-            // Validasi saat input jumlah berubah
-            jumlahPesan.addEventListener('input', () => {
-                const value = parseInt(jumlahPesan.value);
-                if (isNaN(value) || value < 1) {
-                    showError('Jumlah pesanan minimal 1.');
-                } else {
-                    clearError();
-                }
-            });
-
-            // Tombol konfirmasi pesanan
-            konfirmasiPesan.addEventListener('click', () => {
-                console.log('Konfirmasi pesan clicked');
-
-                const nama = document.getElementById('modalNama').textContent;
-                const harga = document.getElementById('modalHarga').textContent;
-                const jumlah = parseInt(jumlahPesan.value);
-                const catatan = document.getElementById('catatan').value;
-
-                // Validasi jumlah
-                if (isNaN(jumlah) || jumlah < 1) {
-                    showError('Mohon masukkan jumlah pesanan minimal 1.');
-                    return;
-                }
-
-                // Kirim pesan WhatsApp
-                const whatsappNumber = '6282388486060';
-                const message = `Halo Blossis, saya ingin memesan:\n\n*${nama}*\nHarga: ${harga}\nJumlah: ${jumlah}\nCatatan: ${catatan || '-'}\n\nApakah bisa diproses?`;
-                const encodedMessage = encodeURIComponent(message);
-                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-                // Buka WhatsApp
-                window.open(whatsappUrl, '_blank');
-
-                // Tutup modal
-                pesanModal.hide();
-
-                // Tampilkan notifikasi sukses
-                const successToast = document.createElement('div');
-                successToast.className = 'position-fixed bottom-0 end-0 p-3';
-                successToast.style.zIndex = '2000';
-                successToast.innerHTML = `
-                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="3000">
-                        <div class="toast-header bg-success text-white">
-                            <strong class="me-auto">Pesanan Terkirim</strong>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-                        </div>
-                        <div class="toast-body">
-                            Pesanan Anda telah dikirim ke WhatsApp. Terima kasih!
-                        </div>
-                    </div>
-                `;
-                document.body.appendChild(successToast);
-                try {
-                    const toast = new bootstrap.Toast(successToast.querySelector('.toast'));
-                    toast.show();
-                } catch (error) {
-                    console.error('Error showing toast:', error);
-                }
             });
 
             // Smooth scrolling for anchor links
@@ -641,9 +561,9 @@
                 navbar.classList.toggle('scrolled', window.scrollY > 50);
             });
 
-            // Animation on scroll for product and testimonial cards
+            // Animation on scroll for product cards
             const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.product-card, .testimonial-card');
+                const elements = document.querySelectorAll('.product-card');
                 elements.forEach((element, index) => {
                     const elementPosition = element.getBoundingClientRect().top;
                     const screenPosition = window.innerHeight * 0.8;
@@ -660,11 +580,11 @@
             });
             animateOnScroll();
 
-            // Create floating bubbles dynamically (limited to 2 per section)
+            // Create floating bubbles dynamically
             const createBubbles = () => {
                 const sections = document.querySelectorAll('section');
                 sections.forEach(section => {
-                    const bubbleCount = Math.min(2, window.innerWidth < 576 ? 1 : 2); // Kurangi bubble di mobile
+                    const bubbleCount = Math.min(2, window.innerWidth < 576 ? 1 : 2);
                     for (let i = 0; i < bubbleCount; i++) {
                         const bubble = document.createElement('div');
                         bubble.classList.add('bubble', 'bubble-float');
@@ -709,6 +629,73 @@
                 }
             });
         });
+
+        function updateQuantity(change) {
+            const quantityInput = document.getElementById('quantity');
+            let quantity = parseInt(quantityInput.value);
+            quantity = Math.max(1, quantity + change);
+            quantityInput.value = quantity;
+        }
+
+        function sendOrder() {
+            // Ambil nilai dari form
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const item = document.getElementById('modalNama').textContent;
+            const sauce = document.getElementById('sauce').value || 'Tidak ada';
+            const phone = document.getElementById('phone').value;
+            const payment = document.getElementById('payment').value;
+            const quantity = document.getElementById('quantity').value;
+            const note = document.getElementById('note').value;
+
+            // Validasi form
+            if (!name || !address || !phone || !payment || (item === 'Blossis Original' && sauce === 'Tidak ada')) {
+                alert('Harap isi semua kolom yang diperlukan.');
+                return;
+            }
+
+           // Format tanggal pengiriman (tanggal 8)
+            const today = new Date();
+            let deliveryDateObj = new Date(today.getFullYear(), today.getMonth(), 8);
+
+            // Jika tanggal 8 sudah lewat di bulan ini, gunakan tanggal 8 bulan depan
+            if (today.getDate() > 8) {
+                deliveryDateObj = new Date(today.getFullYear(), today.getMonth() + 1, 8);
+            }
+
+            const options = { day: 'numeric', month: 'long' };
+            const deliveryDate = deliveryDateObj.toLocaleDateString('id-ID', options);
+
+// Format pesan WhatsApp
+const message = `Hallo Blossis 👋, mohon diisi format di bawah ini yaa☺
+✨Pengiriman tanggal ${deliveryDate} ✨
+- NAMA: ${name}
+- ALAMAT: ${address}
+- PESANAN: ${item} (Jumlah: ${quantity})
+- Varian saos: ${(item === 'Blossis Original' || item === 'Blosom Kentang') ? sauce : 'Tidak berlaku'}
+- No HP: ${phone}
+- Pembayaran: ${payment}
+${note ? `- Catatan: ${note}\n` : ''}
+✨A.n Septina irawan 
+🏧Bca: 823 063 3062
+
+📌 Noted: Pengantaran free ongkir (jika jauh + RP. 3.000 Ongkir)`;
+
+            // Encode message untuk URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = '6282388486060';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            // Buka WhatsApp
+            window.open(whatsappUrl, '_blank');
+            
+            // Tutup modal
+            const pesanModal = bootstrap.Modal.getInstance(document.getElementById('pesanModal'));
+            pesanModal.hide();
+            
+            // Tampilkan notifikasi
+            alert('Pesanan berhasil dikirim ke WhatsApp!');
+        }
     </script>
 </body>
 </html>
